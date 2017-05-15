@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taskirli.Server", "taskirli\taskirli.Server.csproj", "{19A8206F-3700-4320-977F-BE019BAB8321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taskirli.Client", "taskirli.Client\taskirli.Client.csproj", "{9F0DE1FF-6CDC-4C42-879E-5ACC343FC96E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19A8206F-3700-4320-977F-BE019BAB8321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A8206F-3700-4320-977F-BE019BAB8321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A8206F-3700-4320-977F-BE019BAB8321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A8206F-3700-4320-977F-BE019BAB8321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F0DE1FF-6CDC-4C42-879E-5ACC343FC96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F0DE1FF-6CDC-4C42-879E-5ACC343FC96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0DE1FF-6CDC-4C42-879E-5ACC343FC96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0DE1FF-6CDC-4C42-879E-5ACC343FC96E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

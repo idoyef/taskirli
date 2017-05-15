@@ -1,0 +1,6 @@
+C:\Git\taskirli\taskirli.Client\bin\taskirli.Client.dll.config
+C:\Git\taskirli\taskirli.Client\bin\taskirli.Client.dll
+C:\Git\taskirli\taskirli.Client\bin\taskirli.Client.pdb
+C:\Git\taskirli\taskirli.Client\obj\Debug\taskirli.Client.csprojResolveAssemblyReference.cache
+C:\Git\taskirli\taskirli.Client\obj\Debug\taskirli.Client.dll
+C:\Git\taskirli\taskirli.Client\obj\Debug\taskirli.Client.pdb
