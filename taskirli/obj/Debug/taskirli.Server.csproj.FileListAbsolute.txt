@@ -58,6 +58,6 @@ C:\Git\taskirli\taskirli\bin\Microsoft.Owin.Security.Google.xml
 C:\Git\taskirli\taskirli\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Git\taskirli\taskirli\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Git\taskirli\taskirli\bin\System.Web.Http.Owin.xml
-C:\Git\taskirli\taskirli\obj\Debug\taskirli.Server.csprojResolveAssemblyReference.cache
 C:\Git\taskirli\taskirli\obj\Debug\taskirli.dll
 C:\Git\taskirli\taskirli\obj\Debug\taskirli.pdb
+C:\Git\taskirli\taskirli\obj\Debug\taskirli.Server.csprojResolveAssemblyReference.cache
