@@ -12,3 +12,17 @@ C:\Git\taskirli\taskirli.client\bin\System.Web.Http.WebHost.xml
 C:\Git\taskirli\taskirli.client\obj\Debug\taskirli.client.csprojResolveAssemblyReference.cache
 C:\Git\taskirli\taskirli.client\obj\Debug\taskirli.client.dll
 C:\Git\taskirli\taskirli.client\obj\Debug\taskirli.client.pdb
+F:\_GIT\taskirli\taskirli.client\bin\taskirli.client.dll.config
+F:\_GIT\taskirli\taskirli.client\bin\taskirli.client.dll
+F:\_GIT\taskirli\taskirli.client\bin\taskirli.client.pdb
+F:\_GIT\taskirli\taskirli.client\bin\Newtonsoft.Json.dll
+F:\_GIT\taskirli\taskirli.client\bin\System.Net.Http.Formatting.dll
+F:\_GIT\taskirli\taskirli.client\bin\System.Web.Http.dll
+F:\_GIT\taskirli\taskirli.client\bin\System.Web.Http.WebHost.dll
+F:\_GIT\taskirli\taskirli.client\bin\Newtonsoft.Json.xml
+F:\_GIT\taskirli\taskirli.client\bin\System.Net.Http.Formatting.xml
+F:\_GIT\taskirli\taskirli.client\bin\System.Web.Http.xml
+F:\_GIT\taskirli\taskirli.client\bin\System.Web.Http.WebHost.xml
+F:\_GIT\taskirli\taskirli.client\obj\Debug\taskirli.client.csprojResolveAssemblyReference.cache
+F:\_GIT\taskirli\taskirli.client\obj\Debug\taskirli.client.dll
+F:\_GIT\taskirli\taskirli.client\obj\Debug\taskirli.client.pdb

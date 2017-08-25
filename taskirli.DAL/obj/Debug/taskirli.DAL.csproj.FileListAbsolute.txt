@@ -1,0 +1,10 @@
+F:\_GIT\taskirli\taskirli.DAL\bin\Debug\taskirli.DAL.dll.config
+F:\_GIT\taskirli\taskirli.DAL\bin\Debug\taskirli.DAL.dll
+F:\_GIT\taskirli\taskirli.DAL\bin\Debug\taskirli.DAL.pdb
+F:\_GIT\taskirli\taskirli.DAL\bin\Debug\EntityFramework.dll
+F:\_GIT\taskirli\taskirli.DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\_GIT\taskirli\taskirli.DAL\bin\Debug\EntityFramework.xml
+F:\_GIT\taskirli\taskirli.DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\_GIT\taskirli\taskirli.DAL\obj\Debug\taskirli.DAL.csprojResolveAssemblyReference.cache
+F:\_GIT\taskirli\taskirli.DAL\obj\Debug\taskirli.DAL.dll
+F:\_GIT\taskirli\taskirli.DAL\obj\Debug\taskirli.DAL.pdb

@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taskirli.Server", "taskirli\taskirli.Server.csproj", "{19A8206F-3700-4320-977F-BE019BAB8321}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taskirli.client", "taskirli.client\taskirli.client.csproj", "{A399D8FA-F08F-4FB8-BEEB-0E9669D10D26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taskirli.DAL", "taskirli.DAL\taskirli.DAL.csproj", "{E8B645E1-B61C-43D9-A578-95A90EF4D25D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A399D8FA-F08F-4FB8-BEEB-0E9669D10D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A399D8FA-F08F-4FB8-BEEB-0E9669D10D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A399D8FA-F08F-4FB8-BEEB-0E9669D10D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B645E1-B61C-43D9-A578-95A90EF4D25D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B645E1-B61C-43D9-A578-95A90EF4D25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B645E1-B61C-43D9-A578-95A90EF4D25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B645E1-B61C-43D9-A578-95A90EF4D25D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
