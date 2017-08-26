@@ -11,5 +11,6 @@
         $scope.changeView = function (view) {
             $location.path(view);
         }
+        $scope.data1 = 5;
     }
 })();
