@@ -1,32 +1,189 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="taskirlidevdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="taskirlidevdbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="taskirlidevdbModel.C__MigrationHistory" />
+    <EntitySet Name="Accounts" EntityType="taskirlidevdbModel.Account" />
+    <EntitySet Name="AreaEntityTypes" EntityType="taskirlidevdbModel.AreaEntityType" />
+    <EntitySet Name="AspNetRoles" EntityType="taskirlidevdbModel.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="taskirlidevdbModel.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="taskirlidevdbModel.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="taskirlidevdbModel.AspNetUser" />
+    <EntitySet Name="AvailableRentDates" EntityType="taskirlidevdbModel.AvailableRentDate" />
+    <EntitySet Name="Categories" EntityType="taskirlidevdbModel.Category" />
+    <EntitySet Name="Cities" EntityType="taskirlidevdbModel.City" />
+    <EntitySet Name="Countries" EntityType="taskirlidevdbModel.Country" />
+    <EntitySet Name="CurrencyTypes" EntityType="taskirlidevdbModel.CurrencyType" />
+    <EntitySet Name="DeviceTypes" EntityType="taskirlidevdbModel.DeviceType" />
+    <EntitySet Name="DistrictAreas" EntityType="taskirlidevdbModel.DistrictArea" />
+    <EntitySet Name="InProcessRentals" EntityType="taskirlidevdbModel.InProcessRental" />
+    <EntitySet Name="Items" EntityType="taskirlidevdbModel.Item" />
+    <EntitySet Name="ItemFeedbacks" EntityType="taskirlidevdbModel.ItemFeedback" />
+    <EntitySet Name="ItemRentAreas" EntityType="taskirlidevdbModel.ItemRentArea" />
+    <EntitySet Name="RentStatus" EntityType="taskirlidevdbModel.RentStatu" />
+    <EntitySet Name="TenantFeedbacks" EntityType="taskirlidevdbModel.TenantFeedback" />
+    <EntitySet Name="AccountHistories" EntityType="taskirlidevdbModel.AccountHistory" />
+    <EntitySet Name="AccountLoginHistories" EntityType="taskirlidevdbModel.AccountLoginHistory" />
+    <EntitySet Name="ItemHistories" EntityType="taskirlidevdbModel.ItemHistory" />
+    <EntitySet Name="RentalHistories" EntityType="taskirlidevdbModel.RentalHistory" />
+    <AssociationSet Name="FK__Account__CityId__53C2623D" Association="taskirlidevdbModel.FK__Account__CityId__53C2623D">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Account__Country__52CE3E04" Association="taskirlidevdbModel.FK__Account__Country__52CE3E04">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Account__UserId__51DA19CB" Association="taskirlidevdbModel.FK__Account__UserId__51DA19CB">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InProcess__Tenan__733B0D96" Association="taskirlidevdbModel.FK__InProcess__Tenan__733B0D96">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="InProcessRental" EntitySet="InProcessRentals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Item__RenterId__611C5D5B" Association="taskirlidevdbModel.FK__Item__RenterId__611C5D5B">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Item" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemFeedb__Tenan__79E80B25" Association="taskirlidevdbModel.FK__ItemFeedb__Tenan__79E80B25">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="ItemFeedback" EntitySet="ItemFeedbacks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TenantFee__Tenan__7FA0E47B" Association="taskirlidevdbModel.FK__TenantFee__Tenan__7FA0E47B">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="TenantFeedback" EntitySet="TenantFeedbacks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemRentA__AreaE__68BD7F23" Association="taskirlidevdbModel.FK__ItemRentA__AreaE__68BD7F23">
+      <End Role="AreaEntityType" EntitySet="AreaEntityTypes" />
+      <End Role="ItemRentArea" EntitySet="ItemRentAreas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="taskirlidevdbModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="taskirlidevdbModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Available__ItemI__6C8E1007" Association="taskirlidevdbModel.FK__Available__ItemI__6C8E1007">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="AvailableRentDate" EntitySet="AvailableRentDates" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Item__CategoryId__60283922" Association="taskirlidevdbModel.FK__Item__CategoryId__60283922">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Item" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AccountHi__CityI__569ECEE8" Association="taskirlidevdbModel.FK__AccountHi__CityI__569ECEE8">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="AccountHistory" EntitySet="AccountHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__City__CountryId__4EFDAD20" Association="taskirlidevdbModel.FK__City__CountryId__4EFDAD20">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="City" EntitySet="Cities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AccountHi__Count__55AAAAAF" Association="taskirlidevdbModel.FK__AccountHi__Count__55AAAAAF">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="AccountHistory" EntitySet="AccountHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DistrictA__Count__4B2D1C3C" Association="taskirlidevdbModel.FK__DistrictA__Count__4B2D1C3C">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="DistrictArea" EntitySet="DistrictAreas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Item__CurrencyTy__62108194" Association="taskirlidevdbModel.FK__Item__CurrencyTy__62108194">
+      <End Role="CurrencyType" EntitySet="CurrencyTypes" />
+      <End Role="Item" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AccountLo__Devic__0559BDD1" Association="taskirlidevdbModel.FK__AccountLo__Devic__0559BDD1">
+      <End Role="DeviceType" EntitySet="DeviceTypes" />
+      <End Role="AccountLoginHistory" EntitySet="AccountLoginHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InProcess__ItemI__7246E95D" Association="taskirlidevdbModel.FK__InProcess__ItemI__7246E95D">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="InProcessRental" EntitySet="InProcessRentals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InProcess__Statu__742F31CF" Association="taskirlidevdbModel.FK__InProcess__Statu__742F31CF">
+      <End Role="RentStatu" EntitySet="RentStatus" />
+      <End Role="InProcessRental" EntitySet="InProcessRentals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemFeedb__ItemI__78F3E6EC" Association="taskirlidevdbModel.FK__ItemFeedb__ItemI__78F3E6EC">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="ItemFeedback" EntitySet="ItemFeedbacks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemRentA__ItemI__67C95AEA" Association="taskirlidevdbModel.FK__ItemRentA__ItemI__67C95AEA">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="ItemRentArea" EntitySet="ItemRentAreas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TenantFee__ItemI__7EACC042" Association="taskirlidevdbModel.FK__TenantFee__ItemI__7EACC042">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="TenantFeedback" EntitySet="TenantFeedbacks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RentalHis__Statu__76177A41" Association="taskirlidevdbModel.FK__RentalHis__Statu__76177A41">
+      <End Role="RentStatu" EntitySet="RentStatus" />
+      <End Role="RentalHistory" EntitySet="RentalHistories" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="taskirlidevdbModel.AspNetUserRoles">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="C__MigrationHistory">
     <Key>
       <PropertyRef Name="MigrationId" />
       <PropertyRef Name="ContextKey" />
     </Key>
-    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
-    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CityId" Type="Int32" />
+    <Property Name="Strret" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCode" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberCountryCodeId" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNumber" Type="Int32" Nullable="false" />
+    <Property Name="AppToken" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="City" Relationship="taskirlidevdbModel.FK__Account__CityId__53C2623D" FromRole="Account" ToRole="City" />
+    <NavigationProperty Name="Country" Relationship="taskirlidevdbModel.FK__Account__Country__52CE3E04" FromRole="Account" ToRole="Country" />
+    <NavigationProperty Name="AspNetUser" Relationship="taskirlidevdbModel.FK__Account__UserId__51DA19CB" FromRole="Account" ToRole="AspNetUser" />
+    <NavigationProperty Name="InProcessRentals" Relationship="taskirlidevdbModel.FK__InProcess__Tenan__733B0D96" FromRole="Account" ToRole="InProcessRental" />
+    <NavigationProperty Name="Items" Relationship="taskirlidevdbModel.FK__Item__RenterId__611C5D5B" FromRole="Account" ToRole="Item" />
+    <NavigationProperty Name="ItemFeedbacks" Relationship="taskirlidevdbModel.FK__ItemFeedb__Tenan__79E80B25" FromRole="Account" ToRole="ItemFeedback" />
+    <NavigationProperty Name="TenantFeedbacks" Relationship="taskirlidevdbModel.FK__TenantFee__Tenan__7FA0E47B" FromRole="Account" ToRole="TenantFeedback" />
+  </EntityType>
+  <EntityType Name="AreaEntityType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AreaType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ItemRentAreas" Relationship="taskirlidevdbModel.FK__ItemRentA__AreaE__68BD7F23" FromRole="AreaEntityType" ToRole="ItemRentArea" />
   </EntityType>
   <EntityType Name="AspNetRole">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="taskirlidevdbModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
   </EntityType>
   <EntityType Name="AspNetUserClaim">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
     <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+    <NavigationProperty Name="AspNetUser" Relationship="taskirlidevdbModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
   </EntityType>
   <EntityType Name="AspNetUserLogin">
     <Key>
@@ -34,16 +191,16 @@
       <PropertyRef Name="ProviderKey" />
       <PropertyRef Name="UserId" />
     </Key>
-    <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="taskirlidevdbModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
   </EntityType>
   <EntityType Name="AspNetUser">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
     <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
     <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -54,68 +211,533 @@
     <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
     <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
     <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
-    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
-    <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
-    <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Accounts" Relationship="taskirlidevdbModel.FK__Account__UserId__51DA19CB" FromRole="AspNetUser" ToRole="Account" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="taskirlidevdbModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="taskirlidevdbModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+    <NavigationProperty Name="AspNetRoles" Relationship="taskirlidevdbModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+  </EntityType>
+  <EntityType Name="AvailableRentDate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemId" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Item" Relationship="taskirlidevdbModel.FK__Available__ItemI__6C8E1007" FromRole="AvailableRentDate" ToRole="Item" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="Int32" />
+    <NavigationProperty Name="Items" Relationship="taskirlidevdbModel.FK__Item__CategoryId__60283922" FromRole="Category" ToRole="Item" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DistrictId" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="Accounts" Relationship="taskirlidevdbModel.FK__Account__CityId__53C2623D" FromRole="City" ToRole="Account" />
+    <NavigationProperty Name="AccountHistories" Relationship="taskirlidevdbModel.FK__AccountHi__CityI__569ECEE8" FromRole="City" ToRole="AccountHistory" />
+    <NavigationProperty Name="Country" Relationship="taskirlidevdbModel.FK__City__CountryId__4EFDAD20" FromRole="City" ToRole="Country" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Accounts" Relationship="taskirlidevdbModel.FK__Account__Country__52CE3E04" FromRole="Country" ToRole="Account" />
+    <NavigationProperty Name="Cities" Relationship="taskirlidevdbModel.FK__City__CountryId__4EFDAD20" FromRole="Country" ToRole="City" />
+    <NavigationProperty Name="AccountHistories" Relationship="taskirlidevdbModel.FK__AccountHi__Count__55AAAAAF" FromRole="Country" ToRole="AccountHistory" />
+    <NavigationProperty Name="DistrictAreas" Relationship="taskirlidevdbModel.FK__DistrictA__Count__4B2D1C3C" FromRole="Country" ToRole="DistrictArea" />
+  </EntityType>
+  <EntityType Name="CurrencyType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Symbol" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Items" Relationship="taskirlidevdbModel.FK__Item__CurrencyTy__62108194" FromRole="CurrencyType" ToRole="Item" />
+  </EntityType>
+  <EntityType Name="DeviceType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AccountLoginHistories" Relationship="taskirlidevdbModel.FK__AccountLo__Devic__0559BDD1" FromRole="DeviceType" ToRole="AccountLoginHistory" />
+  </EntityType>
+  <EntityType Name="DistrictArea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DistrictName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CountryId" Type="Int32" />
+    <NavigationProperty Name="Country" Relationship="taskirlidevdbModel.FK__DistrictA__Count__4B2D1C3C" FromRole="DistrictArea" ToRole="Country" />
+  </EntityType>
+  <EntityType Name="InProcessRental">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemId" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RentPricePerDay" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="TenantId" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Account" Relationship="taskirlidevdbModel.FK__InProcess__Tenan__733B0D96" FromRole="InProcessRental" ToRole="Account" />
+    <NavigationProperty Name="Item" Relationship="taskirlidevdbModel.FK__InProcess__ItemI__7246E95D" FromRole="InProcessRental" ToRole="Item" />
+    <NavigationProperty Name="RentStatu" Relationship="taskirlidevdbModel.FK__InProcess__Statu__742F31CF" FromRole="InProcessRental" ToRole="RentStatu" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryId" Type="Int32" />
+    <Property Name="RenterId" Type="Int32" />
+    <Property Name="RentPricePerDay" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="CurrencyTypeId" Type="Int32" />
+    <Property Name="RentCount" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="taskirlidevdbModel.FK__Item__RenterId__611C5D5B" FromRole="Item" ToRole="Account" />
+    <NavigationProperty Name="AvailableRentDates" Relationship="taskirlidevdbModel.FK__Available__ItemI__6C8E1007" FromRole="Item" ToRole="AvailableRentDate" />
+    <NavigationProperty Name="Category" Relationship="taskirlidevdbModel.FK__Item__CategoryId__60283922" FromRole="Item" ToRole="Category" />
+    <NavigationProperty Name="CurrencyType" Relationship="taskirlidevdbModel.FK__Item__CurrencyTy__62108194" FromRole="Item" ToRole="CurrencyType" />
+    <NavigationProperty Name="InProcessRentals" Relationship="taskirlidevdbModel.FK__InProcess__ItemI__7246E95D" FromRole="Item" ToRole="InProcessRental" />
+    <NavigationProperty Name="ItemFeedbacks" Relationship="taskirlidevdbModel.FK__ItemFeedb__ItemI__78F3E6EC" FromRole="Item" ToRole="ItemFeedback" />
+    <NavigationProperty Name="ItemRentAreas" Relationship="taskirlidevdbModel.FK__ItemRentA__ItemI__67C95AEA" FromRole="Item" ToRole="ItemRentArea" />
+    <NavigationProperty Name="TenantFeedbacks" Relationship="taskirlidevdbModel.FK__TenantFee__ItemI__7EACC042" FromRole="Item" ToRole="TenantFeedback" />
+  </EntityType>
+  <EntityType Name="ItemFeedback">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemId" Type="Int32" />
+    <Property Name="TenantId" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ItemCondtionRate" Type="Int32" />
+    <Property Name="RenterCommunicationRate" Type="Int32" />
+    <Property Name="FeedBackData" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Account" Relationship="taskirlidevdbModel.FK__ItemFeedb__Tenan__79E80B25" FromRole="ItemFeedback" ToRole="Account" />
+    <NavigationProperty Name="Item" Relationship="taskirlidevdbModel.FK__ItemFeedb__ItemI__78F3E6EC" FromRole="ItemFeedback" ToRole="Item" />
+  </EntityType>
+  <EntityType Name="ItemRentArea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemId" Type="Int32" />
+    <Property Name="AreaEntityType" Type="Int32" />
+    <Property Name="AreaId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AreaEntityType1" Relationship="taskirlidevdbModel.FK__ItemRentA__AreaE__68BD7F23" FromRole="ItemRentArea" ToRole="AreaEntityType" />
+    <NavigationProperty Name="Item" Relationship="taskirlidevdbModel.FK__ItemRentA__ItemI__67C95AEA" FromRole="ItemRentArea" ToRole="Item" />
   </EntityType>
   <EntityType Name="RentStatu">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="Id" />
     </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Status" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="InProcessRentals" Relationship="taskirlidevdbModel.FK__InProcess__Statu__742F31CF" FromRole="RentStatu" ToRole="InProcessRental" />
+    <NavigationProperty Name="RentalHistories" Relationship="taskirlidevdbModel.FK__RentalHis__Statu__76177A41" FromRole="RentStatu" ToRole="RentalHistory" />
   </EntityType>
-  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
-    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+  <EntityType Name="TenantFeedback">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemId" Type="Int32" />
+    <Property Name="TenantId" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ReturnItemCondtionRate" Type="Int32" />
+    <Property Name="TenantCommunicationRate" Type="Int32" />
+    <Property Name="FeedBackData" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Account" Relationship="taskirlidevdbModel.FK__TenantFee__Tenan__7FA0E47B" FromRole="TenantFeedback" ToRole="Account" />
+    <NavigationProperty Name="Item" Relationship="taskirlidevdbModel.FK__TenantFee__ItemI__7EACC042" FromRole="TenantFeedback" ToRole="Item" />
+  </EntityType>
+  <EntityType Name="AccountHistory">
+    <Key>
+      <PropertyRef Name="AccountId" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="street" />
+      <PropertyRef Name="ZipCode" />
+      <PropertyRef Name="PhoneNumberCountryCodeId" />
+      <PropertyRef Name="PhoneNumber" />
+      <PropertyRef Name="UpdateDate" />
+    </Key>
+    <Property Name="AccountId" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="CityId" Type="Int32" />
+    <Property Name="street" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCode" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberCountryCodeId" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNumber" Type="Int32" Nullable="false" />
+    <Property Name="AppToken" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="City" Relationship="taskirlidevdbModel.FK__AccountHi__CityI__569ECEE8" FromRole="AccountHistory" ToRole="City" />
+    <NavigationProperty Name="Country" Relationship="taskirlidevdbModel.FK__AccountHi__Count__55AAAAAF" FromRole="AccountHistory" ToRole="Country" />
+  </EntityType>
+  <EntityType Name="AccountLoginHistory">
+    <Key>
+      <PropertyRef Name="AccountId" />
+      <PropertyRef Name="Date" />
+    </Key>
+    <Property Name="AccountId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Ip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DeviceTypeId" Type="Int32" />
+    <NavigationProperty Name="DeviceType" Relationship="taskirlidevdbModel.FK__AccountLo__Devic__0559BDD1" FromRole="AccountLoginHistory" ToRole="DeviceType" />
+  </EntityType>
+  <EntityType Name="ItemHistory">
+    <Key>
+      <PropertyRef Name="ItemId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="RentPricePerDay" />
+      <PropertyRef Name="UpdateDate" />
+    </Key>
+    <Property Name="ItemId" Type="Int32" Nullable="false" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="RenterId" Type="Int32" />
+    <Property Name="SubCategoryId" Type="Int32" />
+    <Property Name="RentPricePerDay" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="CurrencyTypeId" Type="Int32" />
+    <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="RentalHistory">
+    <Key>
+      <PropertyRef Name="StartDate" />
+      <PropertyRef Name="EndDate" />
+      <PropertyRef Name="RentPricePerDay" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="Int32" />
+    <Property Name="ItemId" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RentPricePerDay" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="RenterId" Type="Int32" />
+    <Property Name="TenantId" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="RentStatu" Relationship="taskirlidevdbModel.FK__RentalHis__Statu__76177A41" FromRole="RentalHistory" ToRole="RentStatu" />
+  </EntityType>
+  <Association Name="FK__Account__CityId__53C2623D">
+    <End Type="taskirlidevdbModel.City" Role="City" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.Account" Role="Account" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="AspNetUsers">
+      <Principal Role="City">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="AspNetUserClaims">
+      <Dependent Role="Account">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Account__Country__52CE3E04">
+    <End Type="taskirlidevdbModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Account__UserId__51DA19CB">
+    <End Type="taskirlidevdbModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InProcess__Tenan__733B0D96">
+    <End Type="taskirlidevdbModel.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.InProcessRental" Role="InProcessRental" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InProcessRental">
+        <PropertyRef Name="TenantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Item__RenterId__611C5D5B">
+    <End Type="taskirlidevdbModel.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.Item" Role="Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="RenterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemFeedb__Tenan__79E80B25">
+    <End Type="taskirlidevdbModel.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.ItemFeedback" Role="ItemFeedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ItemFeedback">
+        <PropertyRef Name="TenantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TenantFee__Tenan__7FA0E47B">
+    <End Type="taskirlidevdbModel.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.TenantFeedback" Role="TenantFeedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TenantFeedback">
+        <PropertyRef Name="TenantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemRentA__AreaE__68BD7F23">
+    <End Type="taskirlidevdbModel.AreaEntityType" Role="AreaEntityType" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.ItemRentArea" Role="ItemRentArea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AreaEntityType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ItemRentArea">
+        <PropertyRef Name="AreaEntityType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Type="taskirlidevdbModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="taskirlidevdbModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim">
         <PropertyRef Name="UserId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
-    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+    <End Type="taskirlidevdbModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+    <End Type="taskirlidevdbModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="AspNetUsers">
+      <Principal Role="AspNetUser">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="AspNetUserLogins">
+      <Dependent Role="AspNetUserLogin">
         <PropertyRef Name="UserId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="AspNetUserRoles">
-    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
-    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+  <Association Name="FK__Available__ItemI__6C8E1007">
+    <End Type="taskirlidevdbModel.Item" Role="Item" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.AvailableRentDate" Role="AvailableRentDate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AvailableRentDate">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="taskirlidevdbEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
-    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
-    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
-    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
-    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
-    <EntitySet Name="RentStatus" EntityType="Self.RentStatu" />
-    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
-      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
-    </AssociationSet>
-    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
-      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
-    </AssociationSet>
-    <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
-      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
-      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-    </AssociationSet>
-  </EntityContainer>
+  <Association Name="FK__Item__CategoryId__60283922">
+    <End Type="taskirlidevdbModel.Category" Role="Category" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.Item" Role="Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AccountHi__CityI__569ECEE8">
+    <End Type="taskirlidevdbModel.City" Role="City" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.AccountHistory" Role="AccountHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountHistory">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__City__CountryId__4EFDAD20">
+    <End Type="taskirlidevdbModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.City" Role="City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AccountHi__Count__55AAAAAF">
+    <End Type="taskirlidevdbModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.AccountHistory" Role="AccountHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountHistory">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DistrictA__Count__4B2D1C3C">
+    <End Type="taskirlidevdbModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.DistrictArea" Role="DistrictArea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DistrictArea">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Item__CurrencyTy__62108194">
+    <End Type="taskirlidevdbModel.CurrencyType" Role="CurrencyType" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.Item" Role="Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CurrencyType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="CurrencyTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AccountLo__Devic__0559BDD1">
+    <End Type="taskirlidevdbModel.DeviceType" Role="DeviceType" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.AccountLoginHistory" Role="AccountLoginHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountLoginHistory">
+        <PropertyRef Name="DeviceTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InProcess__ItemI__7246E95D">
+    <End Type="taskirlidevdbModel.Item" Role="Item" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.InProcessRental" Role="InProcessRental" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InProcessRental">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InProcess__Statu__742F31CF">
+    <End Type="taskirlidevdbModel.RentStatu" Role="RentStatu" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.InProcessRental" Role="InProcessRental" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RentStatu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InProcessRental">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemFeedb__ItemI__78F3E6EC">
+    <End Type="taskirlidevdbModel.Item" Role="Item" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.ItemFeedback" Role="ItemFeedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ItemFeedback">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemRentA__ItemI__67C95AEA">
+    <End Type="taskirlidevdbModel.Item" Role="Item" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.ItemRentArea" Role="ItemRentArea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ItemRentArea">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TenantFee__ItemI__7EACC042">
+    <End Type="taskirlidevdbModel.Item" Role="Item" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.TenantFeedback" Role="TenantFeedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TenantFeedback">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RentalHis__Statu__76177A41">
+    <End Type="taskirlidevdbModel.RentStatu" Role="RentStatu" Multiplicity="0..1" />
+    <End Type="taskirlidevdbModel.RentalHistory" Role="RentalHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RentStatu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RentalHistory">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Type="taskirlidevdbModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+    <End Type="taskirlidevdbModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+  </Association>
 </Schema>

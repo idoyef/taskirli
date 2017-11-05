@@ -12,21 +12,24 @@ namespace taskirli.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class RentStatu
+    public partial class City
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RentStatu()
+        public City()
         {
-            this.InProcessRentals = new HashSet<InProcessRental>();
-            this.RentalHistories = new HashSet<RentalHistory>();
+            this.Accounts = new HashSet<Account>();
+            this.AccountHistories = new HashSet<AccountHistory>();
         }
     
         public int Id { get; set; }
-        public string Status { get; set; }
+        public string Name { get; set; }
+        public Nullable<int> DistrictId { get; set; }
+        public Nullable<int> CountryId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<InProcessRental> InProcessRentals { get; set; }
+        public virtual ICollection<Account> Accounts { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RentalHistory> RentalHistories { get; set; }
+        public virtual ICollection<AccountHistory> AccountHistories { get; set; }
+        public virtual Country Country { get; set; }
     }
 }

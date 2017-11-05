@@ -26,10 +26,28 @@ namespace taskirli.DAL
         }
     
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<AreaEntityType> AreaEntityTypes { get; set; }
         public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<AvailableRentDate> AvailableRentDates { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<City> Cities { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<CurrencyType> CurrencyTypes { get; set; }
+        public virtual DbSet<DeviceType> DeviceTypes { get; set; }
+        public virtual DbSet<DistrictArea> DistrictAreas { get; set; }
+        public virtual DbSet<InProcessRental> InProcessRentals { get; set; }
+        public virtual DbSet<Item> Items { get; set; }
+        public virtual DbSet<ItemFeedback> ItemFeedbacks { get; set; }
+        public virtual DbSet<ItemRentArea> ItemRentAreas { get; set; }
         public virtual DbSet<RentStatu> RentStatus { get; set; }
+        public virtual DbSet<TenantFeedback> TenantFeedbacks { get; set; }
+        public virtual DbSet<AccountHistory> AccountHistories { get; set; }
+        public virtual DbSet<AccountLoginHistory> AccountLoginHistories { get; set; }
+        public virtual DbSet<ItemHistory> ItemHistories { get; set; }
+        public virtual DbSet<RentalHistory> RentalHistories { get; set; }
     }
 }

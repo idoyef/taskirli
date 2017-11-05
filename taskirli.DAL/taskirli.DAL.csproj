@@ -51,6 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccountHistory.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccountLoginHistory.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AreaEntityType.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="AspNetRole.cs">
       <DependentUpon>Context.tt</DependentUpon>
     </Compile>
@@ -61,6 +73,15 @@
       <DependentUpon>Context.tt</DependentUpon>
     </Compile>
     <Compile Include="AspNetUserLogin.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AvailableRentDate.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
       <DependentUpon>Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Context.Context.cs">
@@ -78,11 +99,44 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Context.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyType.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="C__MigrationHistory.cs">
       <DependentUpon>Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="DeviceType.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DistrictArea.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InProcessRental.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemFeedback.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemHistory.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemRentArea.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RentalHistory.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="RentStatu.cs">
+      <DependentUpon>Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TenantFeedback.cs">
       <DependentUpon>Context.tt</DependentUpon>
     </Compile>
   </ItemGroup>

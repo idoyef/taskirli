@@ -12,21 +12,18 @@ namespace taskirli.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class RentStatu
+    public partial class DeviceType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RentStatu()
+        public DeviceType()
         {
-            this.InProcessRentals = new HashSet<InProcessRental>();
-            this.RentalHistories = new HashSet<RentalHistory>();
+            this.AccountLoginHistories = new HashSet<AccountLoginHistory>();
         }
     
         public int Id { get; set; }
-        public string Status { get; set; }
+        public string Type { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<InProcessRental> InProcessRentals { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RentalHistory> RentalHistories { get; set; }
+        public virtual ICollection<AccountLoginHistory> AccountLoginHistories { get; set; }
     }
 }

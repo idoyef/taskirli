@@ -12,21 +12,18 @@ namespace taskirli.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class RentStatu
+    public partial class AreaEntityType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RentStatu()
+        public AreaEntityType()
         {
-            this.InProcessRentals = new HashSet<InProcessRental>();
-            this.RentalHistories = new HashSet<RentalHistory>();
+            this.ItemRentAreas = new HashSet<ItemRentArea>();
         }
     
         public int Id { get; set; }
-        public string Status { get; set; }
+        public string AreaType { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<InProcessRental> InProcessRentals { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RentalHistory> RentalHistories { get; set; }
+        public virtual ICollection<ItemRentArea> ItemRentAreas { get; set; }
     }
 }

@@ -12,21 +12,27 @@ namespace taskirli.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class RentStatu
+    public partial class Country
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RentStatu()
+        public Country()
         {
-            this.InProcessRentals = new HashSet<InProcessRental>();
-            this.RentalHistories = new HashSet<RentalHistory>();
+            this.Accounts = new HashSet<Account>();
+            this.Cities = new HashSet<City>();
+            this.AccountHistories = new HashSet<AccountHistory>();
+            this.DistrictAreas = new HashSet<DistrictArea>();
         }
     
         public int Id { get; set; }
-        public string Status { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<InProcessRental> InProcessRentals { get; set; }
+        public virtual ICollection<Account> Accounts { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RentalHistory> RentalHistories { get; set; }
+        public virtual ICollection<City> Cities { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AccountHistory> AccountHistories { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DistrictArea> DistrictAreas { get; set; }
     }
 }

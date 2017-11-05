@@ -12,21 +12,19 @@ namespace taskirli.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class RentStatu
+    public partial class CurrencyType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RentStatu()
+        public CurrencyType()
         {
-            this.InProcessRentals = new HashSet<InProcessRental>();
-            this.RentalHistories = new HashSet<RentalHistory>();
+            this.Items = new HashSet<Item>();
         }
     
         public int Id { get; set; }
-        public string Status { get; set; }
+        public string Name { get; set; }
+        public string Symbol { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<InProcessRental> InProcessRentals { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RentalHistory> RentalHistories { get; set; }
+        public virtual ICollection<Item> Items { get; set; }
     }
 }

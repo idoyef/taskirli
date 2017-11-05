@@ -4,16 +4,56 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="34a60888a70e4999b3fb8b8de8a73a47" Name="Diagram1">
-        <EntityTypeShape EntityType="taskirlidevdbModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="taskirlidevdbModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="taskirlidevdbModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="taskirlidevdbModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="taskirlidevdbModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="taskirlidevdbModel.RentStatu" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
-        <AssociationConnector Association="taskirlidevdbModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
-        <AssociationConnector Association="taskirlidevdbModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
-        <AssociationConnector Association="taskirlidevdbModel.AspNetUserRoles" ManuallyRouted="false" />
+      <Diagram DiagramId="34a60888a70e4999b3fb8b8de8a73a47" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="taskirlidevdbModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.Account" Width="1.5" PointX="5.25" PointY="14.625" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.AreaEntityType" Width="1.5" PointX="7.5" PointY="7.125" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.AspNetRole" Width="1.5" PointX="0.75" PointY="24.125" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="25.125" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="22.625" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.AspNetUser" Width="1.5" PointX="3" PointY="22.875" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.AvailableRentDate" Width="1.5" PointX="9.75" PointY="21.125" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.Category" Width="1.5" PointX="5.25" PointY="9.75" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.City" Width="1.5" PointX="3" PointY="18.875" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.Country" Width="1.5" PointX="0.75" PointY="12.5" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.CurrencyType" Width="1.5" PointX="5.25" PointY="6.25" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.DeviceType" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.DistrictArea" Width="1.5" PointX="3" PointY="11.125" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.InProcessRental" Width="1.5" PointX="10.5" PointY="15.25" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.Item" Width="1.5" PointX="7.5" PointY="9.875" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.ItemFeedback" Width="1.5" PointX="12.75" PointY="13" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.ItemRentArea" Width="1.5" PointX="9.75" PointY="10.75" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.RentStatu" Width="1.5" PointX="8.25" PointY="24" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.TenantFeedback" Width="1.5" PointX="12.75" PointY="9" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.AccountHistory" Width="1.5" PointX="8.25" PointY="15" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.AccountLoginHistory" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.ItemHistory" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="taskirlidevdbModel.RentalHistory" Width="1.5" PointX="10.5" PointY="24.375" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__Account__CityId__53C2623D" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__Account__Country__52CE3E04" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__Account__UserId__51DA19CB" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__InProcess__Tenan__733B0D96" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__Item__RenterId__611C5D5B" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__ItemFeedb__Tenan__79E80B25" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__TenantFee__Tenan__7FA0E47B" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__ItemRentA__AreaE__68BD7F23" />
+        <AssociationConnector Association="taskirlidevdbModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="taskirlidevdbModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__Available__ItemI__6C8E1007" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__Item__CategoryId__60283922" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__AccountHi__CityI__569ECEE8" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__City__CountryId__4EFDAD20" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__AccountHi__Count__55AAAAAF" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__DistrictA__Count__4B2D1C3C" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__Item__CurrencyTy__62108194" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__AccountLo__Devic__0559BDD1" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__InProcess__ItemI__7246E95D" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__InProcess__Statu__742F31CF" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__ItemFeedb__ItemI__78F3E6EC" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__ItemRentA__ItemI__67C95AEA" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__TenantFee__ItemI__7EACC042" />
+        <AssociationConnector Association="taskirlidevdbModel.FK__RentalHis__Statu__76177A41" />
+        <AssociationConnector Association="taskirlidevdbModel.AspNetUserRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
